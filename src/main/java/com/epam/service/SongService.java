@@ -39,7 +39,7 @@ public class SongService {
     public List<Integer> deleteSongs(String ids) {
         return Arrays.stream(ids.split(","))
                 .map(Integer::valueOf)
-                .filter(songRepository::existsById)
-                .peek(songRepository::deleteById).toList();
+                .filter(songRepository::existsByS3LocationId)
+                .peek(songRepository::deleteByS3Location).toList();
     }
 }

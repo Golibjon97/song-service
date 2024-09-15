@@ -18,7 +18,7 @@ public class AppRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) {
         jdbcTemplate
                 .update(
-                        "INSERT INTO metadata (id, name, artist, album, length, resource_id, year) VALUES (0, 'test', 'test', 'test', 'test', 0, '1099')"
+                        "INSERT INTO metadata (id, name, artist, album, length, s3location_id, year) VALUES (0, 'test', 'test', 'test', 'test', 0, '1099')"
                 );
     }
 }
