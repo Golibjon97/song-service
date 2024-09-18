@@ -10,6 +10,5 @@ ARG JAR_FILE=build/libs/song-service-1.0-SNAPSHOT.jar
 # Copy the jar file to the docker image
 COPY ${JAR_FILE} app.jar
 
-
 # Set the start point
 CMD ["java","-jar","/app.jar"]
